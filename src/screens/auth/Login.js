@@ -1,11 +1,11 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, ImageBackground } from 'react-native';
-import CustemTextInput from '../../component/CustemTextInput';
+import CustemTextInput from '../../component/input/CustemTextInput';
 import { height, Top, width } from '../../utils/constent';
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import Entypo from 'react-native-vector-icons/Entypo'
-import CustemButton from '../../component/CustemButton';
+import CustemButton from '../../component/input/CustemButton';
 import { useNavigation } from '@react-navigation/native'
 
 // create a component

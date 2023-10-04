@@ -6,6 +6,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import Role from '../screens/Role';
 import Login from '../screens/auth/Login';
 import Signup from '../screens/auth/Signup';
+import Otp from '../screens/auth/Otp';
+import Hostnavigation from './hostnavigation/Hostnavigation';
 // create a component
 
 const Stack = createNativeStackNavigator()
@@ -16,6 +18,8 @@ const MainNavigater = () => {
                 <Stack.Screen name="/role" component={Role} />
                 <Stack.Screen name="/login" component={Login} />
                 <Stack.Screen name="/signup" component={Signup} />
+                <Stack.Screen name="/otp" component={Otp} />
+                <Stack.Screen  name='/host' component={Hostnavigation}/>
             </Stack.Navigator>
         </NavigationContainer>
     );

@@ -1,7 +1,7 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TextInput } from 'react-native';
-import { width } from '../utils/constent';
+import { width } from '../../utils/constent';
 
 // create a component
 const CustemTextInput = (props) => {

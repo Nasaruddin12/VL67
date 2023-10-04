@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { width } from '../utils/constent'
+import { width } from '../../utils/constent'
 
 const CustemButton = (props) => {
     return (

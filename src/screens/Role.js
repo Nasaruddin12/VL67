@@ -19,10 +19,10 @@ const Role = () => {
                         <Text style={[styles.text, { position: 'absolute', alignSelf: 'center', top: height * 0.14 }]}>I'm an Artist </Text>
                     </View>
                     <View style={{ height: height * 0.3 }}>
-                        <TouchableOpacity onPress={()=> navigation.navigate('/login')}>
+                        <Pressable onPress={()=> navigation.navigate('/login')}>
                             <Image source={require('../assets/artist.jpeg')} style={styles.guestImg} />
                             <Text style={[styles.text, { position: 'absolute', alignSelf: 'center', top: height * 0.07 }]}>I'm a Host </Text>
-                        </TouchableOpacity>
+                        </Pressable>
                         <View style={{ marginTop: width * 0.01 }}>
                             <Image source={require('../assets/artist.jpeg')} style={styles.guestImg} />
                             <Text style={[styles.text, { position: 'absolute', alignSelf: 'center', top: height * 0.07 }]}>I'm a Guest </Text>

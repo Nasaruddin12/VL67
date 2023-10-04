@@ -1,11 +1,15 @@
 import { View, Text, StyleSheet, Image, ImageBackground } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { height, Top, width } from '../../utils/constent'
-import CustemButton from '../../component/CustemButton'
-import CustemTextInput from '../../component/CustemTextInput'
+import CustemButton from '../../component/input/CustemButton'
+import CustemTextInput from '../../component/input/CustemTextInput'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import Entypo from 'react-native-vector-icons/Entypo'
+import CustomRadioButton from '../../component/input/CustomRadioButton'
+import { useNavigation } from '@react-navigation/native'
 const Signup = () => {
+    const navigation = useNavigation()
+    const [value, setValue] = useState('Male')
     return (
         <View style={styles.container}>
             <View style={{ margin: width * 0.01 }}>
@@ -23,20 +27,39 @@ const Signup = () => {
                         <CustemTextInput
                             placeholder='Email'
                             onChangeText={(e) => console.log(e)}
-                            icon={<Entypo name='key' size={width * 0.05} color='#fff' />}
+                            icon={<Entypo name='mail' size={width * 0.05} color='#fff' />}
                         />
                     </View>
                     <View style={{ marginHorizontal: width * 0.15, marginTop: width * 0.04 }}>
                         <CustemTextInput
                             placeholder='Contact Number'
                             onChangeText={(e) => console.log(e)}
-                            icon={<Entypo name='key' size={width * 0.05} color='#fff' />}
+                            icon={<AntDesign name='mobile1' size={width * 0.05} color='#fff' />}
                         />
                     </View>
-                    
+                    <View style={styles.flex}>
+                        <View style={{ width: "45%" }}>
+                            <Text style={styles.subtext}>Gender</Text>
+                        </View>
+                        <View style={{ flexDirection: 'row' }}>
+                            <View>
+                                <CustomRadioButton title="Male"
+                                    status={value == 'Male' ? true : false}
+                                    press={() => setValue('Male')}
+                                />
+                            </View>
 
-                    <View style={{ marginHorizontal: width * 0.2, marginTop: width * 0.8 }}>
-                        <CustemButton title='Signup' colors={false} press={() => console.log('press')}
+                            <View style={{ marginLeft: width * 0.024 }}>
+                                <CustomRadioButton title="Female"
+                                    status={value == 'Female' ? true : false}
+                                    press={() => setValue('Female')}
+                                />
+                            </View>
+                        </View>
+                    </View>
+
+                    <View style={{ marginHorizontal: width * 0.2, marginTop: width * 0.5 }}>
+                        <CustemButton title='Signup' colors={false} press={() => navigation.navigate('/otp')}
                         />
                     </View>
                 </ImageBackground>
@@ -56,11 +79,11 @@ const styles = StyleSheet.create({
     },
     img: {
         // width: width * 0.98,
-        height:'100%',
+        height: '100%',
         borderRadius: width * 0.02,
         // backgroundColor: 'transparent',
         // opacity: 0.6
-        
+
     },
     logo: {
         alignSelf: 'center',
@@ -74,6 +97,15 @@ const styles = StyleSheet.create({
         color: '#FFFFFF',
         textAlign: 'center',
         marginTop: width * 0.03
+    },
+    flex: {
+        flexDirection: 'row',
+        marginTop: width * 0.04,
+        marginHorizontal: width * 0.15
+    },
+    subtext: {
+        color: '#ffd',
+        fontSize: width * 0.035
     }
 })
 export default Signup
