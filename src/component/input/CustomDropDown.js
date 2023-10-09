@@ -19,7 +19,7 @@ const CustomDropDown = (props) => {
                 maxHeight={300}
                 labelField={props?.label}
                 valueField={props?.value}
-                placeholder={''}
+                placeholder={props.placeholder}
                 searchPlaceholder="Search..."
                 value={props?.value}
                 onFocus={() => props?.onFocus()}
@@ -49,8 +49,8 @@ const styles = StyleSheet.create({
     dropdown: {
         height: width * 0.09,
         borderColor: 'gray',
-        borderWidth: 0.5,
-        borderRadius: 8,
+        borderWidth: 1,
+        borderRadius: 1,
         paddingHorizontal: 8,
     },
     icon: {

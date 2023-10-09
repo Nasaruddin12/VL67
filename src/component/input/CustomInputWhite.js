@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         color:'#000',
         fontSize:width * 0.036,
         height: width * 0.09,
-        // borderBottomWidth:1,
+        borderWidth:1,
         // borderColor:"#fff",
         backgroundColor:'#fff'
     },

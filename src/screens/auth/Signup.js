@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, Image, ImageBackground } from 'react-native'
 import React, { useState } from 'react'
 import { height, Top, width } from '../../utils/constent'
-import CustemButton from '../../component/input/CustemButton'
+import CustemButton from '../../component/button/CustemButton'
 import CustemTextInput from '../../component/input/CustemTextInput'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import Entypo from 'react-native-vector-icons/Entypo'

@@ -5,7 +5,7 @@ import CustemTextInput from '../../component/input/CustemTextInput';
 import { height, Top, width } from '../../utils/constent';
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import Entypo from 'react-native-vector-icons/Entypo'
-import CustemButton from '../../component/input/CustemButton';
+import CustemButton from '../../component/button/CustemButton';
 import { useNavigation } from '@react-navigation/native'
 
 // create a component

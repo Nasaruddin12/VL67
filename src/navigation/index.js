@@ -16,10 +16,10 @@ const MainNavigater = () => {
         <NavigationContainer>
             <Stack.Navigator screenOptions={{headerShown: false}}>
                 <Stack.Screen name="/role" component={Role} />
+                <Stack.Screen  name='/host' component={Hostnavigation}/>
                 <Stack.Screen name="/login" component={Login} />
                 <Stack.Screen name="/signup" component={Signup} />
                 <Stack.Screen name="/otp" component={Otp} />
-                <Stack.Screen  name='/host' component={Hostnavigation}/>
             </Stack.Navigator>
         </NavigationContainer>
     );

@@ -7,7 +7,7 @@ import Statusbar from '../../component/Header/Statusbar'
 import CustomInputWhite from '../../component/input/CustomInputWhite'
 import Entypo from 'react-native-vector-icons/Entypo'
 import CustomRadioButton from '../../component/input/CustomRadioButton'
-import CustemButton from '../../component/input/CustemButton'
+import CustemButton from '../../component/button/CustemButton'
 import CustomDropDown from '../../component/input/CustomDropDown'
 const CreateEvent = () => {
     const navigation = useNavigation()
@@ -107,6 +107,7 @@ const CreateEvent = () => {
                     <CustomDropDown
                         onChange={(text) => console.log(text)}
                         data={[]}
+                        placeholder=''
                     />
                 </View>
                 <View style={{ marginHorizontal: width * 0.04, marginTop: width * 0.03 }}>
@@ -121,10 +122,10 @@ const CreateEvent = () => {
                     </View>
                     <View style={{ flexDirection: 'row', width: '50%' }}>
                         <View style={{ width: '50%' }}>
-                            <CustomRadioButton title='All' status={true} press={()=>console.log()}/>
+                            <CustomRadioButton title='All' status={true} press={() => console.log()} color='#fff' />
                         </View>
                         <View>
-                            <CustomRadioButton title='Guest' press={()=>console.log()}/>
+                            <CustomRadioButton title='Guest' press={() => console.log()} color='#fff'/>
                         </View>
                     </View>
                 </View>
@@ -132,6 +133,7 @@ const CreateEvent = () => {
                     <Text style={styles.text}>City</Text>
                     <CustomDropDown
                         onChange={(item) => console.log(item)}
+                        placeholder=''
                         data={[]}
                     />
                 </View>
@@ -139,11 +141,12 @@ const CreateEvent = () => {
                     <Text style={styles.text}>Location</Text>
                     <CustomDropDown
                         onChange={(item) => console.log(item)}
+                        placeholder=''
                         data={[]}
                     />
                 </View>
                 <View style={{ marginHorizontal: width * 0.3, marginVertical: width * 0.15 }}>
-                    <CustemButton title='Save' press={()=> navigation.navigate('/venue')} />
+                    <CustemButton title='Save' press={() => navigation.navigate('/venue')} />
                 </View>
 
 

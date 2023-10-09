@@ -1,7 +1,7 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ImageBackground, Image } from 'react-native';
-import CustemButton from '../../component/input/CustemButton';
+import CustemButton from '../../component/button/CustemButton';
 import CustemTextInput from '../../component/input/CustemTextInput';
 import { height, Top, width } from '../../utils/constent';
 import AntDesign from 'react-native-vector-icons/AntDesign'
